@@ -127,7 +127,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.5.4</version>
+            <version>3.3.0</version>
             <executions>
               <execution>
                 <id>make-distributive</id>
@@ -157,11 +157,11 @@
               </execution>
             </executions>
           </plugin>
-          
+
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.1.1</version>
+            <version>3.3.0</version>
             <executions>
               <execution>
                 <id>generate-javadoc</id>
@@ -206,82 +206,8 @@
       </build>
     </profile>
   </profiles>
-  
+
   <build>
     <plugins>
       <plugin>
-        <groupId>com.igormaznitsa</groupId>
-        <artifactId>meta-checker</artifactId>
-        <version>1.1.3</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <configuration>
-              <restrictClassFormat>6</restrictClassFormat>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
-        <configuration>
-          <compilerArgument>-Xlint:all</compilerArgument>
-          <verbose>false</verbose>
-          <source>1.6</source>
-          <target>1.6</target>
-          <showDeprecation>true</showDeprecation>
-          <showWarnings>true</showWarnings>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>animal-sniffer-maven-plugin</artifactId>
-        <version>1.19</version>
-        <executions>
-          <execution>
-            <id>ensure-java-1.6-class-library</id>
-            <phase>test</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <configuration>
-              <signature>
-                <groupId>org.codehaus.mojo.signature</groupId>
-                <artifactId>java16-sun</artifactId>
-                <version>1.0</version>
-              </signature>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>  
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.4</version>
-        <configuration>
-          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-          <goalPrefix>upom</goalPrefix>
-        </configuration>
-        <executions>
-          <execution>
-            <id>mojo-descriptor</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>descriptor</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>generated-helpmojo</id>
-            <goals>
-              <goal>helpmojo</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</project>
+        <groupId>com.
